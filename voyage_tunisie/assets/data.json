@@ -1,0 +1,114 @@
+{
+  "villes": [
+    {
+      "id": 1,
+      "nom": "Tunis",
+      "description": "Tunis est la capitale de la Tunisie, située sur la côte méditerranéenne.",
+      "image": "assets/images/tunis.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "Sousse",
+      "description": "Sousse est une ville côtière située au centre-est de la Tunisie.",
+      "image": "assets/images/sousse.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "Djerba",
+      "description": "Djerba est une île située au sud-est de la Tunisie.",
+      "image": "assets/images/djerba.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "Mahdia",
+      "description": "Mahdia est une île située au nord de la Tunisie.",
+      "image": "assets/images/mahdia.jpg"
+    },
+    {
+      "id": 5,
+      "nom": "Monestir",
+      "description": "Monestir est une île située au nord de la Tunisie.",
+      "image": "assets/images/monestir.jpg"
+    },
+    {
+      "id": 6,
+      "nom": "Zarzis",
+      "description": "Zarzis est une île située au sud de la Tunisie.",
+      "image": "assets/images/zaris.jpg"
+    }
+  ],
+  "lieux": [
+    {
+      "id": 1,
+      "nom": "Medina",
+      "description": "La médina de Tunis est un labyrinthe de ruelles, de souks et de mosquées. Elle abrite des monuments historiques comme la Grande Mosquée Zitouna. C'est un lieu incontournable pour découvrir l'histoire tunisienne.",
+      "image": "assets/images/medina_tunis.jpg",
+      "ville": 1,
+      "favori": false
+    },
+    {
+      "id": 2,
+      "nom": "Musée du Bardo",
+      "description": "Le musée du Bardo est l'un des musées les plus importants d'Afrique du Nord. Il abrite une vaste collection de mosaïques romaines. Les visiteurs peuvent explorer l'histoire de la Tunisie à travers ses expositions.",
+      "image": "assets/images/bardo.jpg",
+      "ville": 1,
+      "favori": false
+    },
+    {
+      "id": 3,
+      "nom": "Avenue Habib Bourguiba",
+      "description": "C'est la principale avenue de Tunis, souvent comparée aux Champs-Élysées. Bordée de cafés, de boutiques et de bâtiments historiques, elle est le cœur de la vie urbaine. Un lieu idéal pour une promenade.",
+      "image": "assets/images/avenue_habib_bourguiba.jpg",
+      "ville": 1,
+      "favori": false
+    },
+    {
+      "id": 4,
+      "nom": "Medina de Sousse",
+      "description": "La médina de Sousse est une forteresse médiévale bien préservée. Elle offre une vue imprenable sur la mer Méditerranée. Les marchés traditionnels sont parfaits pour acheter des souvenirs locaux.",
+      "image": "assets/images/medina_sousse.jpg",
+      "ville": 2,
+      "favori": false
+    },
+    {
+      "id": 5,
+      "nom": "Ribat de Sousse",
+      "description": "Le Ribat est une ancienne forteresse qui servait de défense et de refuge. Il est l'un des mieux conservés de Tunisie. Les visiteurs peuvent monter sur ses tours pour une vue panoramique.",
+      "image": "assets/images/ribat_sousse.jpg",
+      "ville": 2,
+      "favori": false
+    },
+    {
+      "id": 6,
+      "nom": "Port El Kantaoui",
+      "description": "Ce port de plaisance moderne est une destination touristique prisée. Il offre des restaurants, des boutiques et des activités nautiques. C'est un lieu idéal pour se détendre au bord de la mer.",
+      "image": "assets/images/port_el_kantaoui.jpg",
+      "ville": 2,
+      "favori": false
+    },
+    {
+      "id": 7,
+      "nom": "Houmt Souk",
+      "description": "Houmt Souk est la principale ville de Djerba. Elle est célèbre pour ses marchés animés et ses souks colorés. On y trouve une grande variété de produits artisanaux locaux.",
+      "image": "assets/images/houmt_souk.jpg",
+      "ville": 3,
+      "favori": false
+    },
+    {
+      "id": 8,
+      "nom": "La Synagogue de la Ghriba",
+      "description": "Cette synagogue est l'un des lieux les plus anciens et sacrés du judaïsme. Elle attire des pèlerins du monde entier. Son architecture et son histoire en font un lieu fascinant à visiter.",
+      "image": "assets/images/ghriba.jpg",
+      "ville": 3,
+      "favori": false
+    },
+    {
+      "id": 9,
+      "nom": "Plage de Sidi Mahrez",
+      "description": "Cette plage est l'une des plus belles de Djerba. Elle est réputée pour son sable blanc et ses eaux cristallines. Les visiteurs peuvent profiter de diverses activités nautiques.",
+      "image": "assets/images/sidi_mahrez.jpg",
+      "ville": 3,
+      "favori": false
+    }
+  ]
+}
