@@ -29,11 +29,10 @@ class _VilleListScreenState extends State<VilleListScreen> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.deepOrange, // Couleur attrayante pour l'AppBar
+        backgroundColor: Colors.deepOrange,
         actions: [
           TextButton(
             onPressed: () {
-              // Naviguer vers l'écran PanierScreen
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -43,7 +42,7 @@ class _VilleListScreenState extends State<VilleListScreen> {
             },
             child: Row(
               children: [
-                Icon(Icons.shopping_cart, color: Colors.white), // Icône blanche
+                Icon(Icons.favorite, color: Colors.white), // Icône blanche
                 SizedBox(width: 5), // Espacement entre l'icône et le texte
                 Text(
                   "",  // Texte du bouton

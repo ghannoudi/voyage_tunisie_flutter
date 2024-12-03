@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../models/lieu.dart';
 import '../services/data_service.dart';
 
@@ -16,6 +17,12 @@ class _PanierScreenState extends State<PanierScreen> {
     super.initState();
     _futureFavoris = _getFavoris();
   }
+   // Fonction pour ouvrir Google Maps
+  Future<void> _openMap(String lieuNom) async {
+    final String encodedLocation = Uri.encodeComponent(lieuNom); // Encoder le nom du lieu
+    final Uri url = Uri.parse('https://www.google.com/maps?q=$encodedLocation'); 
+      await launchUrl(url);
+   }
 
   // Fonction pour récupérer les lieux favoris depuis SharedPreferences
   Future<List<Lieu>> _getFavoris() async {
@@ -63,7 +70,14 @@ class _PanierScreenState extends State<PanierScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Panier'),
+        title: Text('À Visiter',
+        style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          ),
+        backgroundColor: Colors.deepOrange,
       ),
       body: FutureBuilder<List<Lieu>>(
         future: _futureFavoris,
@@ -129,6 +143,12 @@ class _PanierScreenState extends State<PanierScreen> {
                             _toggleFavori(lieu);
                           },
                         ),
+                         IconButton(
+                              icon: Icon(Icons.map, color: Colors.blue),
+                              onPressed: () {
+                                _openMap(lieu.nom); // Ouvrir Google Maps
+                              },
+                            ),
                       ],
                     ),
                   ],
