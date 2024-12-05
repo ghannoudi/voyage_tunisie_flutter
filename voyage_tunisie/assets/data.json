@@ -110,5 +110,118 @@
       "ville": 3,
       "favori": false
     }
-  ]
-}
+  ],
+    "spectacles": [
+      {
+        "id": 4,
+        "nom": "Nuit des étoiles",
+        "date": "2024-09-05",
+        "programme": [
+          "20:00: Observation astronomique",
+          "21:00: Conférence sur l'astronomie",
+          "22:00: Concert de musique classique"
+        ],
+        "ville": 4
+      },
+      {
+        "id": 5,
+        "nom": "Festival du Jasmin",
+        "date": "2024-07-20",
+        "programme": [
+          "10:00: Défilé de chars fleuris",
+          "11:30: Concours de parfumerie artisanale",
+          "14:00: Spectacle de danse folklorique"
+        ],
+        "ville": 5
+      },
+      {
+        "id": 6,
+        "nom": "Soirée des contes",
+        "date": "2024-08-12",
+        "programme": [
+          "19:00: Lecture de contes populaires",
+          "20:30: Spectacle de marionnettes",
+          "21:30: Concert de musique traditionnelle"
+        ],
+        "ville": 6
+      },
+      {
+        "id": 7,
+        "nom": "Concert de musique arabe",
+        "date": "2024-11-02",
+        "programme": [
+          "18:00: Performance de chants traditionnels",
+          "20:00: Concert de oud et qanun",
+          "22:00: Spectacle de danse orientale"
+        ],
+        "ville": 1
+      },
+      {
+        "id": 8,
+        "nom": "Festival du cinéma méditerranéen",
+        "date": "2024-06-25",
+        "programme": [
+          "15:00: Projection de courts métrages",
+          "17:30: Rencontre avec des réalisateurs",
+          "20:00: Remise des prix"
+        ],
+        "ville": 2
+      },
+      {
+        "id": 9,
+        "nom": "Spectacle de magie",
+        "date": "2024-10-30",
+        "programme": [
+          "16:00: Spectacle de magie pour enfants",
+          "19:00: Grande illusion en plein air",
+          "20:30: Rencontre avec le magicien"
+        ],
+        "ville": 3
+      },
+      {
+        "id": 10,
+        "nom": "Nuit de la poésie",
+        "date": "2024-11-18",
+        "programme": [
+          "19:00: Lecture de poèmes tunisiens",
+          "20:30: Performance de poésie slam",
+          "22:00: Concert acoustique"
+        ],
+        "ville": 1
+      },
+      {
+        "id": 11,
+        "nom": "Journée du patrimoine",
+        "date": "2024-05-10",
+        "programme": [
+          "10:00: Visite guidée de la médina",
+          "12:30: Atelier de calligraphie",
+          "15:00: Spectacle de musique traditionnelle"
+        ],
+        "ville": 2
+      },
+      {
+        "id": 12,
+        "nom": "Festival des arts populaires",
+        "date": "2024-09-15",
+        "programme": [
+          "14:00: Défilé de troupes folkloriques",
+          "16:00: Exposition d'artisanat local",
+          "19:00: Concert en plein air"
+        ],
+        "ville": 4
+      },
+      {
+        "id": 13,
+        "nom": "Soirée des étoiles montantes",
+        "date": "2024-08-22",
+        "programme": [
+          "18:00: Performance de jeunes musiciens",
+          "20:00: Concours de chant",
+          "22:00: Remise de prix aux artistes"
+        ],
+        "ville": 5
+      }
+    ]
+  }
+  

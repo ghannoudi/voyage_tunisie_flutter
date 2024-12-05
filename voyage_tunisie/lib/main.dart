@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'models/ville.dart'; // Importer la classe Ville
 import 'screens/ville_list_screen.dart';
 import 'screens/lieu_list_screen.dart';
+import 'screens/spectacle_list_screen.dart'; // Importer le fichier SpectacleListScreen
 import 'screens/panier.dart'; // Si vous avez un panier, vous pouvez l'ajouter
 
 void main() {
@@ -27,6 +28,14 @@ class MyApp extends StatelessWidget {
           final Ville ville = settings.arguments as Ville; // Récupérer l'objet Ville passé en argument
           return MaterialPageRoute(
             builder: (context) => LieuListScreen(ville: ville), // Passer la ville à l'écran des lieux
+          );
+        }
+
+        // Vérifier si la route est '/spectacles'
+        if (settings.name == '/spectacles') {
+          final Ville ville = settings.arguments as Ville; // Récupérer l'objet Ville passé en argument
+          return MaterialPageRoute(
+            builder: (context) => SpectacleListScreen(ville: ville), // Passer la ville à l'écran des spectacles
           );
         }
 

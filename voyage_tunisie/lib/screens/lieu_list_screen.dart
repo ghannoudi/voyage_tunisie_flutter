@@ -47,22 +47,26 @@ class _LieuListScreenState extends State<LieuListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.ville.nom),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.event), // Icône du bouton
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                '/spectacles', 
+                arguments: widget.ville,  
+              );
+            },
+          ),
+        ],
       ),
+      
       body: FutureBuilder<List<Lieu>>(
         future: futureLieux,
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          }
-
-          if (snapshot.hasError) {
-            return Center(child: Text("Erreur : ${snapshot.error}"));
-          }
-
           if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return Center(child: Text("Aucun lieu trouvé."));
           }
-
           // Filtrer les lieux de la ville sélectionnée
           final lieux = snapshot.data!
               .where((lieu) => lieu.villeId == widget.ville.id) // Filtrer par villeId
