@@ -17,26 +17,21 @@ class _PanierScreenState extends State<PanierScreen> {
     super.initState();
     _futureFavoris = _getFavoris();
   }
-   // Fonction pour ouvrir Google Maps
   Future<void> _openMap(String lieuNom) async {
     final String encodedLocation = Uri.encodeComponent(lieuNom); // Encoder le nom du lieu
     final Uri url = Uri.parse('https://www.google.com/maps?q=$encodedLocation'); 
       await launchUrl(url);
    }
 
-  // Fonction pour récupérer les lieux favoris depuis SharedPreferences
   Future<List<Lieu>> _getFavoris() async {
-    // Charger les lieux
     List<Lieu> lieux = await DataService().loadLieux();
 
-    // Récupérer les lieux favoris
     final prefs = await SharedPreferences.getInstance();
     List<Lieu> favoris = [];
 
     for (var lieu in lieux) {
       bool? isFavori = prefs.getBool('favori_${lieu.id}') ?? false;
       if (isFavori) {
-        // Marquer les lieux favoris
         lieu.favori = true;
         favoris.add(lieu);
       } else {
@@ -53,14 +48,10 @@ class _PanierScreenState extends State<PanierScreen> {
     bool currentFavoriState = prefs.getBool('favori_${lieu.id}') ?? false;
 
     if (currentFavoriState) {
-      // Si le lieu est déjà favori, on le retire
       await prefs.setBool('favori_${lieu.id}', false);
     } else {
-      // Si le lieu n'est pas favori, on l'ajoute
       await prefs.setBool('favori_${lieu.id}', true);
     }
-
-    // Rafraîchir la liste des favoris
     setState(() {
       _futureFavoris = _getFavoris();
     });
@@ -139,14 +130,13 @@ class _PanierScreenState extends State<PanierScreen> {
                             color: lieu.favori ? Colors.red : Colors.grey,
                           ),
                           onPressed: () {
-                            // Appeler la fonction pour ajouter ou supprimer le lieu des favoris
                             _toggleFavori(lieu);
                           },
                         ),
                          IconButton(
                               icon: Icon(Icons.map, color: Colors.blue),
                               onPressed: () {
-                                _openMap(lieu.nom); // Ouvrir Google Maps
+                                _openMap(lieu.nom); 
                               },
                             ),
                       ],

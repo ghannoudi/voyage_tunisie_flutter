@@ -10,7 +10,6 @@ class SpectacleListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Utilisation de FutureBuilder pour attendre que la liste des spectacles soit chargée
     return Scaffold(
       appBar: AppBar(
         title: Text('Spectacles à ${ville.nom}'),
@@ -21,10 +20,9 @@ class SpectacleListScreen extends StatelessWidget {
           final spectacles = snapshot.data!
           
               .where((spectacle) =>
-                  spectacle.ville == ville.id) // Comparer avec l'ID de la ville
+                  spectacle.ville == ville.id) 
               .toList();
 
-          // Si aucun spectacle n'est trouvé après le filtrage
           if (spectacles.isEmpty) {
             return Center(
                 child: Text("Aucun spectacle trouvé pour cette ville."));
@@ -37,10 +35,10 @@ class SpectacleListScreen extends StatelessWidget {
               final spectacle = spectacles[index];
               
               return Card(
-                elevation: 4, // Ajoute une ombre à la carte
+                elevation: 4, 
                 margin: const EdgeInsets.all(12.0),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15), // Coins arrondis
+                  borderRadius: BorderRadius.circular(15), 
                 ),
                 child: Column(
                   children: [
@@ -58,9 +56,9 @@ class SpectacleListScreen extends StatelessWidget {
                       ),
                       leading: Icon(Icons.event,
                           color: Colors.deepPurple,
-                          size: 40), // Icône de gauche
+                          size: 40), 
                     ),
-                    Divider(), // Ligne de séparation visuelle
+                    Divider(), 
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 8.0),
@@ -86,7 +84,7 @@ class SpectacleListScreen extends StatelessWidget {
                         }).toList(),
                       ),
                     ),
-                    SizedBox(height: 8), // Espace supplémentaire en bas
+                    SizedBox(height: 8), 
                   ],
                 ),
               );

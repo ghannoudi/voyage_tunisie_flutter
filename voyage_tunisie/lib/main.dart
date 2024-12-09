@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'models/ville.dart'; // Importer la classe Ville
 import 'screens/ville_list_screen.dart';
 import 'screens/lieu_list_screen.dart';
-import 'screens/spectacle_list_screen.dart'; // Importer le fichier SpectacleListScreen
-import 'screens/panier.dart'; // Si vous avez un panier, vous pouvez l'ajouter
+import 'screens/panier.dart';
+import 'screens/Spectacle_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,37 +21,32 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/', // L'écran par défaut
+      initialRoute: '/', 
       onGenerateRoute: (settings) {
-        // Vérifier si la route est '/lieux'
         if (settings.name == '/lieux') {
-          final Ville ville = settings.arguments as Ville; // Récupérer l'objet Ville passé en argument
+          final Ville ville = settings.arguments as Ville; 
           return MaterialPageRoute(
-            builder: (context) => LieuListScreen(ville: ville), // Passer la ville à l'écran des lieux
+            builder: (context) => LieuListScreen(ville: ville), 
+          );
+        }
+          if (settings.name == '/spectacles') {
+          final Ville ville = settings.arguments as Ville; 
+          return MaterialPageRoute(
+            builder: (context) => SpectacleListScreen(ville: ville), 
           );
         }
 
-        // Vérifier si la route est '/spectacles'
-        if (settings.name == '/spectacles') {
-          final Ville ville = settings.arguments as Ville; // Récupérer l'objet Ville passé en argument
-          return MaterialPageRoute(
-            builder: (context) => SpectacleListScreen(ville: ville), // Passer la ville à l'écran des spectacles
-          );
-        }
-
-        // Si la route est '/panier', créer une route pour l'écran du panier
         if (settings.name == '/panier') {
           return MaterialPageRoute(
-            builder: (context) => PanierScreen(), // Remplacer par votre écran PanierScreen
+            builder: (context) => PanierScreen(), 
           );
         }
 
-        // Retourner null ou une route par défaut pour les autres cas
         return MaterialPageRoute(
           builder: (context) => VilleListScreen(), // Accueil par défaut avec la liste des villes
         );
       },
-      home: VilleListScreen(), // L'écran d'accueil avec la liste des villes
+      home: VilleListScreen(), 
     );
   }
 }
